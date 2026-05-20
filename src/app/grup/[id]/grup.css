@@ -1,0 +1,308 @@
+.grup-page {
+  min-height: 100vh;
+  background-color: var(--bg-main);
+}
+
+/* Hero del grup */
+.grup-hero {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  background: var(--bg-dark);
+}
+
+.grup-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.grup-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(23, 27, 34, 0.2) 0%, rgba(23, 27, 34, 0.82) 100%);
+  z-index: 1;
+}
+
+.grup-hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+}
+
+.grup-hero-badges {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.grup-hero-badges .badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  box-shadow: var(--shadow-md);
+}
+
+.grup-hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin: 0 0 0.25rem;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
+}
+
+.grup-hero-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* Contingut principal */
+.grup-content {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+.grup-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.grup-section {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.grup-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+/* Descripció */
+.grup-description {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Concerts futurs */
+.concerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.concerts-empty {
+  color: var(--text-secondary);
+  font-style: italic;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+/* Concerts passats */
+.grup-section--passats {
+  opacity: 0.75;
+}
+
+/* Sidebar */
+.grup-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.grup-details-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 90px;
+}
+
+.grup-details-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.grup-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.grup-detail-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.grup-detail-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-soft);
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.grup-detail-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.grup-detail-value {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Xarxes socials */
+.grup-xarxes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.xarxa-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-soft);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.xarxa-link:hover {
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+
+/* Botó preferit */
+.grup-preferit-btn {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.grup-back-btn {
+  width: 100%;
+}
+
+.grup-image-form {
+  display: grid;
+  gap: 0.75rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 1.25rem;
+}
+
+.grup-image-form h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.grup-image-submit {
+  width: 100%;
+}
+
+.file-selected {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .grup-hero {
+    height: 300px;
+  }
+
+  .grup-hero-title {
+    font-size: 2rem;
+  }
+
+  .grup-content {
+    grid-template-columns: 1fr;
+  }
+
+  .grup-details-card {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .grup-hero {
+    height: 250px;
+  }
+
+  .grup-hero-content {
+    padding-bottom: 1.5rem;
+  }
+
+  .grup-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .grup-section {
+    padding: 1.5rem;
+  }
+
+  .grup-details-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grup-hero {
+    height: 200px;
+  }
+
+  .grup-hero-title {
+    font-size: 1.5rem;
+  }
+
+  .grup-section h2 {
+    font-size: 1.25rem;
+  }
+
+  .grup-content {
+    padding: 2rem 0;
+  }
+}

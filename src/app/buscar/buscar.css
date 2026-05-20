@@ -1,0 +1,310 @@
+.buscar-page {
+  min-height: 100vh;
+  background-color: var(--bg-main);
+}
+
+/* Secció hero */
+.buscar-hero {
+  background:
+    linear-gradient(135deg, rgba(23, 27, 34, 0.92), rgba(34, 111, 122, 0.78)),
+    url('/img/no-image.jpg') center/cover;
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+}
+
+.buscar-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin: 0 0 0.5rem 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.buscar-hero p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+/* Barra de cerca */
+.buscar-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  max-width: 500px;
+}
+
+.buscar-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  background-color: white;
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+.buscar-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(214, 64, 69, 0.12);
+}
+
+.buscar-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.buscar-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.buscar-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.buscar-btn:active {
+  transform: translateY(0);
+}
+
+/* Contenidor de resultats */
+.buscar-results {
+  padding: 2rem 0;
+}
+
+/* Secció de grups */
+.buscar-section {
+  margin-bottom: 3rem;
+}
+
+.buscar-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--bg-card);
+}
+
+.buscar-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.buscar-count {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Grid de grups */
+.buscar-grups-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.buscar-grup-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.buscar-grup-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.buscar-grup-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.buscar-grup-genre {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Llistat de concerts */
+.buscar-concerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.buscar-concert-item {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: var(--transition);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: center;
+}
+
+.buscar-concert-item:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+}
+
+.buscar-concert-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.buscar-concert-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.buscar-concert-artist {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.buscar-concert-details {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.buscar-concert-meta {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+.buscar-concert-date {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.buscar-concert-location {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Empty states */
+.buscar-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.buscar-empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.buscar-empty h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.buscar-empty p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .buscar-hero {
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .buscar-hero h1 {
+    font-size: 2rem;
+  }
+
+  .buscar-form {
+    max-width: 100%;
+  }
+
+  .buscar-grups-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .buscar-concert-item {
+    grid-template-columns: 1fr;
+  }
+
+  .buscar-concert-meta {
+    text-align: left;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .buscar-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .buscar-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .buscar-form {
+    flex-direction: column;
+  }
+
+  .buscar-btn {
+    width: 100%;
+  }
+
+  .buscar-grups-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .buscar-empty-icon {
+    font-size: 3rem;
+  }
+
+  .buscar-empty h3 {
+    font-size: 1.25rem;
+  }
+}
