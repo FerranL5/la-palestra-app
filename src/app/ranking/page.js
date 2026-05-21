@@ -18,8 +18,7 @@ export default function RankingPage() {
       setError(null);
 
       try {
-        // Canvia la URL per la teva API
-        const response = await fetch(`http://localhost:5246/api/Grup/Ranking/${regioSeleccionada}`);
+        const response = await fetch(`/api/Grup/Ranking/${regioSeleccionada}`);
         
         if (!response.ok) {
           throw new Error('Error al carregar el ranking');

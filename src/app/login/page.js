@@ -5,16 +5,8 @@ import { useRouter } from 'next/navigation';
 import { useAppContext } from '@/context/AppContext';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
+import { sha256 } from '@/utils/sha256';
 import './login.css';
-
-const sha256 = async (text) => {
-  const encodedText = new TextEncoder().encode(text);
-  const hashBuffer = await crypto.subtle.digest('SHA-256', encodedText);
-
-  return Array.from(new Uint8Array(hashBuffer))
-    .map((byte) => byte.toString(16).padStart(2, '0'))
-    .join('');
-};
 
 export default function LoginPage() {
   const router = useRouter();

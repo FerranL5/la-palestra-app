@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5246/api';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || '/api';
 const API_ORIGIN = API_URL.replace(/\/api\/?$/, '');
 
 const DEFAULT_IMAGE = '/img/no-image.jpg';
