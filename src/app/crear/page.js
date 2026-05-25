@@ -76,7 +76,6 @@ export default function CrearPage() {
     lloc: '',
     ciutat: '',
     preu: '',
-    descripcio: ''
   });
 
   const concertEsdevenimentBuit = {
@@ -89,7 +88,6 @@ export default function CrearPage() {
   // Estats del formulari d'esdeveniment
   const [esdevenimentData, setEsdevenimentData] = useState({
     nom: '',
-    descripcio: '',
     dataInici: '',
     dataFi: '',
     lloc: '',
@@ -228,7 +226,6 @@ export default function CrearPage() {
         lloc: '',
         ciutat: '',
         preu: '',
-        descripcio: ''
       });
 
       setTimeout(() => {
@@ -389,7 +386,6 @@ export default function CrearPage() {
       });
       setEsdevenimentData({
         nom: '',
-        descripcio: '',
         dataInici: '',
         dataFi: '',
         lloc: '',
@@ -479,7 +475,7 @@ export default function CrearPage() {
                 value={concertData.titol}
                 onChange={handleConcertChange}
                 className="form-control"
-                placeholder="Ex: Txarango - Gira 2025"
+                placeholder="Ex: Txarango - Gira 2026"
                 required
               />
             </div>
@@ -565,21 +561,6 @@ export default function CrearPage() {
               />
             </div>
 
-            <div className="form-group">
-              <label className="form-label" htmlFor="descripcio">
-                Descripció
-              </label>
-              <textarea
-                id="descripcio"
-                name="descripcio"
-                value={concertData.descripcio}
-                onChange={handleConcertChange}
-                className="form-control"
-                rows="4"
-                placeholder="Descripció del concert, informació addicional..."
-              ></textarea>
-            </div>
-
             <div className="form-actions">
               <button type="submit" className="btn btn-primary btn-lg">
                 {enviant ? 'Creant...' : 'Crear Concert'}
@@ -610,25 +591,9 @@ export default function CrearPage() {
                 value={esdevenimentData.nom}
                 onChange={handleEsdevenimentChange}
                 className="form-control"
-                placeholder="Ex: Canet Rock 2025"
+                placeholder="Ex: Canet Rock 2026"
                 required
               />
-            </div>
-
-            <div className="form-group">
-              <label className="form-label" htmlFor="descripcio">
-                Descripció <span className="required">*</span>
-              </label>
-              <textarea
-                id="descripcio"
-                name="descripcio"
-                value={esdevenimentData.descripcio}
-                onChange={handleEsdevenimentChange}
-                className="form-control"
-                rows="4"
-                placeholder="Descripció de l'esdeveniment o festival..."
-                required
-              ></textarea>
             </div>
 
             <div className="form-row">

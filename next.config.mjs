@@ -2,6 +2,7 @@ import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const apiInternalUrl = process.env.API_INTERNAL_URL || 'http://localhost:5246';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -13,11 +14,11 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'http://api:8080/api/:path*',
+        destination: `${apiInternalUrl}/api/:path*`,
       },
       {
         source: '/uploads/:path*',
-        destination: 'http://api:8080/uploads/:path*',
+        destination: `${apiInternalUrl}/uploads/:path*`,
       },
     ];
   },

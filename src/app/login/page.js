@@ -118,20 +118,6 @@ export default function LoginPage() {
                 Crear un compte
               </Link>
             </div>
-
-            <div className="login-demo">
-              <p className="demo-title">🎬 Usuaris de prova:</p>
-              <div className="demo-users">
-                <div className="demo-user">
-                  <code>usuari1@email.com</code>
-                  <code>password123</code>
-                </div>
-                <div className="demo-user">
-                  <code>usuari2@email.com</code>
-                  <code>password456</code>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </main>
